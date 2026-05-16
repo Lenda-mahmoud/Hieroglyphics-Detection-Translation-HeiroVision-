@@ -37,17 +37,6 @@ Our Siamese Network converges efficiently within 20 epochs, leveraging Cosine Si
 * **Best Validation Accuracy:** ~94%
 * **Reference Embeddings Cached:** 3270 symbols
 
-<p align="center">
-  <img src="outputs/training_curves.png" width="550" alt="Training Curves">
-</p>
-
-### Pipeline Execution & Sign Matching
-Here is the core ML pipeline detecting bounding boxes, calculating similarity scores against the cached embeddings, and routing the sequential data to the translation engine:
-
-<p align="center">
-  <img src="outputs/detection_output.png" width="650" alt="Pipeline Output">
-</p>
-
 ### Final Translation Example
 > **Input Query:** Sequential column data matched to Gardiner codes (e.g., M17, Y1, G43).
 > 
@@ -60,9 +49,9 @@ Here is the core ML pipeline detecting bounding boxes, calculating similarity sc
 The complete lifecycle of this project includes a cross-platform application interface leveraging this exact Machine Learning backend for real-time mobile scanning and translation:
 
 <p align="center">
-  <img src="outputs/app_splash.jpeg" width="220" alt="App Splash Screen"> &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="outputs/app_scan.jpeg" width="220" alt="App Real-time Scan"> &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="outputs/app_result.jpeg" width="220" alt="App Translation Result">
+  <img src="outputs/App_UI.jpeg" width="220" alt="App Splash Screen"> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="outputs/uploading.jpeg" width="220" alt="Uploading pictures of temples' walls"> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="outputs/full_sentences_translation.jpeg" width="220" alt="App Translation Result">
 </p>
 
 ---
