@@ -49,9 +49,9 @@ Our Siamese Network converges efficiently within 20 epochs, leveraging Cosine Si
 The complete lifecycle of this project includes a cross-platform application interface leveraging this exact Machine Learning backend for real-time mobile scanning and translation:
 
 <p align="center">
-  <img src="outputs/App_UI.jpeg" width="220" alt="App Splash Screen"> &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="outputs/uploading.jpeg" width="220" alt="Uploading pictures of temples' walls"> &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="outputs/full_sentences_translation.jpeg" width="220" alt="App Translation Result">
+  <img src="Outputs/App_UI.jpeg" width="220" alt="App Splash Screen"> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="Outputs/uploading.jpeg" width="220" alt="Uploading pictures of temples' walls"> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="Outputs/full_sentences_translation.jpeg" width="220" alt="App Translation Result">
 </p>
 
 ---
