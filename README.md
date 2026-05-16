@@ -1,6 +1,6 @@
 # 𓂀 Hieroglyphics Detection & End-to-End Translation Pipeline
 
-An AI-powered pipeline designed to detect ancient Egyptian hieroglyphic symbols, classify them using Deep Learning, and translate the full text using LLMs. 
+An AI-powered pipeline designed to detect ancient Egyptian hieroglyphic symbols, classify them using Deep Learning, and translate the full text using LLMs.
 
 ## 🚀 Project Overview
 This project provides an end-to-end solution for historical text digitization:
@@ -32,23 +32,38 @@ As the **Machine Learning Engineer** on this graduation project, I engineered an
 
 ## 📊 Results & Outputs
 
-### Training Performance
-Our Siamese Network converges efficiently within 20 epochs:
+### Training Performance & Metrics
+Our Siamese Network converges efficiently within 20 epochs, leveraging Cosine Similarity for robust zero-shot inference:
+* **Best Validation Accuracy:** ~94%
+* **Reference Embeddings Cached:** 3270 symbols
+
 <p align="center">
-  <img src="outputs/training_curves.png" width="600" alt="Training Curves">
+  <img src="outputs/training_curves.png" width="550" alt="Training Curves">
 </p>
 
-### Pipeline Execution
-Here is the system detecting, segmenting, and identifying individual signs from a raw input block:
+### Pipeline Execution & Sign Matching
+Here is the core ML pipeline detecting bounding boxes, calculating similarity scores against the cached embeddings, and routing the sequential data to the translation engine:
+
 <p align="center">
-  <img src="outputs/detection_output.png" width="700" alt="Pipeline Output">
+  <img src="outputs/detection_output.png" width="650" alt="Pipeline Output">
 </p>
 
 ### Final Translation Example
-> **Input Query:** Sequential column data matched to Gardiner codes.
+> **Input Query:** Sequential column data matched to Gardiner codes (e.g., M17, Y1, G43).
 > 
 > **Gemini Contextual Output:** > _"The inscription invokes Geb, the Earth god, to 'stretch out your arms' to his 'sons,' hinting at renewal and rebirth. It calls for a swift transition beyond 'long old age' into the eternal realm, sustained by rituals, 'recitations,' 'tribute,' and the essential 'beer,' ensuring divine placement. Ultimately, the text articulates a hopeful journey towards an enduring, divinely-secured afterlife for the honored individual, guided and blessed by the pantheon.
-Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings..."_
+."_
+
+---
+
+## 📱 Mobile Application Core
+The complete lifecycle of this project includes a cross-platform application interface leveraging this exact Machine Learning backend for real-time mobile scanning and translation:
+
+<p align="center">
+  <img src="outputs/app_splash.jpeg" width="220" alt="App Splash Screen"> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="outputs/app_scan.jpeg" width="220" alt="App Real-time Scan"> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="outputs/app_result.jpeg" width="220" alt="App Translation Result">
+</p>
 
 ---
 
@@ -56,10 +71,25 @@ Output is truncated. View as a scrollable element or open in a text editor. Adju
 * **Deep Learning:** PyTorch, Torchvision
 * **Computer Vision:** OpenCV (Contour analysis, OTSU Thresholding)
 * **LLM Integration:** Google GenAI SDK (Gemini-1.5-Flash)
-* **Data Processing:** Scipy (Cosine Distance), NumPy, Pickle, PIL
+* **Data Infrastructure:** SciPy (Cosine Metrics), NumPy, Pickle, PIL
+
+---
 
 ## 💻 How to Run
+
 1. **Clone the Repository:**
    ```bash
    git clone [https://github.com/Lenda-mahmoud/Hieroglyphics-Detection-Translation-HeiroVision.git](https://github.com/Lenda-mahmoud/Hieroglyphics-Detection-Translation-HeiroVision.git)
    cd Hieroglyphics-Detection-Translation-HeiroVision
+2.**Install Dependencies:**
+pip install -r requirements.txt
+
+3.**Explore the Notebooks:**
+
+    >Run src/Hieroglyphics_Siamese_Model.ipynb to check the Siamese Network training setup and SqueezeNet backbone configuration.
+    >Run src/Hieroglyphics_Translation.ipynb to execute the full end-to-end pipeline (OpenCV detection -> Siamese classification -> Gemini translation).
+#📌 Project Notes & System Integration
+
+    > System Focus: This repository acts as the primary sandbox and testing environment for the core Machine Learning architecture, model evaluation, and backend pipeline routing.
+
+   > Team UI Component: While the complete production-level implementation featured a distributed codebase and a mobile interface developed by the team, this specific workspace showcases the core AI algorithm development, verification logic, and LLM orchestration logic.
