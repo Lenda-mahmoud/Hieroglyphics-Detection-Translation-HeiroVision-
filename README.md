@@ -33,7 +33,7 @@ As the **Machine Learning Engineer** on this graduation project, I engineered an
 ## 📊 Results & Outputs
 
 ### Training Performance & Metrics
-Our Siamese Network converges efficiently within 20 epochs, leveraging Cosine Similarity for robust zero-shot inference:
+Our Siamese Network converges efficiently within 10 epochs, leveraging Cosine Similarity for robust zero-shot inference:
 * **Best Validation Accuracy:** ~94%
 * **Reference Embeddings Cached:** 3270 symbols
 
